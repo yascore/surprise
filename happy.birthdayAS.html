@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday ❤️ </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: rgb(71, 60, 142);">
+  <section>
+ <h2>I heard it's your birthday, is that right ? 🎁</h2>
+</section>
+<section> 
+   <button class="btn" onclick="audio.play();">Yes</button>
+   <script type="text/javascript">
+    const audio = new Audio();
+        audio.src="new-year-fireworks-sound4-180205.mp3";
+   </script>
+  <button id="noButton">No</button>
+
+  <script>
+    document.getElementsByClassName("btn")[0].addEventListener("click",()=> {confetti();})
+    document.getElementsByClassName("btn")[0].addEventListener("click",()=> {audio.play();})
+
+    // Add event listener to make the "No" button run away when the mouse approaches
+    document.getElementById('noButton').addEventListener('mouseover', runAway);
+
+    function runAway() {
+      // Make the "No" button move away from the mouse
+      document.getElementById('noButton').style.left = Math.random() * window.innerWidth + 'px';
+      document.getElementById('noButton').style.top = Math.random() * window.innerHeight + 'px';
+    }
+  </script>
+  
+  <div class="popup">
+    <h3>Joyeux Anniversaire Samad ! 🎉🫶🏼
+      Qu'Allah t'accorde une belle et longue vie pleine de bonheur et de réussite.
+      T'es un homme exceptionnel au grand coeur et ne laisse rien ni personne t'enlever ce bon caractère.
+      Je souhaite qu'Allah allège tes peines et facilite toutes tes affaires, et qu'Il te garde longtemps auprès de moi en nous réunissant par Sa Grâce.
+      Merci d'être toujours là pour moi, tu es tout ce que je n'ai même pas osé rêver.❤️
+      Yasmine - Ta fleur préférée 🌹
+    </h3>
+   </div> 
+</section>
+
+
+<canvas id="my-canvas"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+    let btn = document.querySelector('.btn');
+    let popup = document.querySelector('.popup');
+    let confe = document.querySelector('#my canvas');
+    btn.onclick = function(){  
+        popup.classList.add('active');
+        confe.classList.add('active');
+
+
+    }
+
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator
+    (confettiSettings);
+confetti.render();
+</script>
+</body>
+</html>

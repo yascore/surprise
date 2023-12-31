@@ -1,0 +1,74 @@
+
+section h2 {
+    position: relative; left: 530px; top: 100px;
+    padding-left: 15px;
+    font-size: 21px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: azure;
+
+    
+}
+#noButton {
+    position:absolute;
+    padding:15px 25px;
+    font-family: 'Brush Script MT', Cursive;
+    background-color: rgb(118, 124, 236); /* Light peach pink */
+    color: #fff; /* White text color */
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 15px; /* Round rectangle shape */
+    margin: 0 3cm; /* Separation of 6cm (3cm on each side) */
+   transform: translate(900%,300%); }
+
+section button{
+position: absolute;
+    padding:15px 25px;
+    font-family: 'Brush Script MT', Cursive;
+    font-size: 1.1em;
+    border-radius: 15px;
+    margin: 0 0;
+    color: azure;
+    background-color: rgb(118, 124, 236);
+    cursor:pointer;
+    transform: translate(850%,300%);
+}
+
+.popup
+{ 
+    position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background:#471111;
+color: azure;
+width: 450px;
+height:300px;
+box-shadow: 0 25px 50px rgb(217, 207, 206),
+0 0 0 1000px rgba(123, 79, 79, 0.95);
+border-radius: 15px;
+display: flex;
+justify-content: center; 
+align-items: center;
+padding: 40px;
+visibility: hidden;
+}
+
+.popup.active
+{ 
+    visibility: visible;
+}
+#my-canvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100vh;
+    z-index: 100000;
+    visibility: hidden;
+}
+#my-canvas.active
+{
+    visibility: visible;
+
+}
